@@ -19,10 +19,12 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
+    "celebrate": "^15.0.3",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "http-errors": "^2.0.0",
+    "joi": "^18.0.1",
     "mongoose": "^8.19.3",
     "pino-http": "^11.0.0",
     "pino-pretty": "^13.1.2"
