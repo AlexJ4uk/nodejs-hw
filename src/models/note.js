@@ -3,6 +3,11 @@ import { TAGS } from "../constants/tags.js";
 
 const noteSchema = new Schema(
   {
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
     title: {
       type: String,
       required: true,
@@ -23,6 +28,11 @@ const noteSchema = new Schema(
   { timestamps: true, versionKey: false }
 );
 
-noteSchema.index({ title: "text", content: "text" }, { name: 'noteTextIndex' });
+noteSchema.index({
+  title: "text",
+  content: "text"
+}, {
+  name: 'noteTextIndex'
+});
 
 export const Note = model("Note", noteSchema);
