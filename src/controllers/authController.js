@@ -116,7 +116,7 @@ export const requestResetEmail = async (req, res, next) => {
     }
 
     const token = jwt.sign(
-      { sub: user._id, email: user.email },
+      { sub: user._id.toString(), email: user.email },
       process.env.JWT_SECRET,
       { expiresIn: '15m' },
     );
